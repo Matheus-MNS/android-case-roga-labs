@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.user_post.UserPostFragment">
+    tools:context=".feature.user_post.presetantion.UserPostFragment">
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
