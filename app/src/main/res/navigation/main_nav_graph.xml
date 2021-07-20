@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.matheus.caserogalabs.base_app.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_userPostFragment"
+            app:destination="@id/userPostFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPostFragment"
+        android:name="com.matheus.caserogalabs.feature.user_post.UserPostFragment"
+        android:label="fragment_user_post"
+        tools:layout="@layout/fragment_user_post" >
+        <action
+            android:id="@+id/action_userPostFragment_to_commentUserPostFragment"
+            app:destination="@id/commentUserPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentUserPostFragment"
+        android:name="com.matheus.caserogalabs.feature.comment_user_post.CommentUserPostFragment"
+        android:label="fragment_comment_user_post"
+        tools:layout="@layout/fragment_comment_user_post" />
+</navigation>

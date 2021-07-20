@@ -43,7 +43,7 @@ dependencies {
     // Android x library
     implementation "androidx.core:core-ktx:$corektx_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "com.google.android.material:$material_version"
+    implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
