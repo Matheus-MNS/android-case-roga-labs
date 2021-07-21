@@ -1,4 +1,4 @@
-package com.matheus.caserogalabs.feature.user_post.data.remote.model
+package com.matheus.caserogalabs.feature.user_post.data.remote.data_source
 
 import com.matheus.caserogalabs.feature.user_post.data.remote.api.RogaLabsService
 

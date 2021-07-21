@@ -1,14 +1,15 @@
-package com.matheus.caserogalabs.feature.user_post.presetantion
+package com.matheus.caserogalabs.feature.user_post.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.matheus.caserogalabs.databinding.FragmentUserPostBinding
-import com.matheus.caserogalabs.feature.user_post.data.model.PostModel
-import com.matheus.caserogalabs.feature.user_post.presetantion.adapter.UserPostAdapter
+import com.matheus.caserogalabs.feature.user_post.presentation.model.PostModel
+import com.matheus.caserogalabs.feature.user_post.presentation.adapter.UserPostAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserPostFragment : Fragment() {
@@ -42,6 +43,9 @@ class UserPostFragment : Fragment() {
 
     private fun handleRecyclerView(list: List<PostModel>) {
         userPostAdapter = UserPostAdapter(list)
-        binding.userPostReclycerView.adapter = userPostAdapter
+        binding.userPostRecyclerView.adapter = userPostAdapter
+        userPostAdapter.itemClickListener = { postId ->
+            Toast.makeText(context, "$postId", Toast.LENGTH_LONG).show()
+        }
     }
 }

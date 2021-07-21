@@ -1,4 +1,4 @@
-package com.matheus.caserogalabs.feature.user_post.data.model
+package com.matheus.caserogalabs.feature.user_post.presentation.model
 
 data class PostModel(
     var userId: Int,

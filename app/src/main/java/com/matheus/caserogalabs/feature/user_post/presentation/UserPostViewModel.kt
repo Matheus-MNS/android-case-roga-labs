@@ -1,10 +1,10 @@
-package com.matheus.caserogalabs.feature.user_post.presetantion
+package com.matheus.caserogalabs.feature.user_post.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.matheus.caserogalabs.feature.user_post.data.model.PostModel
+import com.matheus.caserogalabs.feature.user_post.presentation.model.PostModel
 import com.matheus.caserogalabs.feature.user_post.data.remote.mapper.PostMapper
-import com.matheus.caserogalabs.feature.user_post.data.remote.model.PostRemoteDataSource
+import com.matheus.caserogalabs.feature.user_post.data.remote.data_source.PostRemoteDataSource
 import com.matheus.caserogalabs.feature.user_post.data.remote.model.PostResponse
 import retrofit2.Call
 import retrofit2.Callback

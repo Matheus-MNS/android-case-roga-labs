@@ -1,10 +1,12 @@
-package com.matheus.caserogalabs.feature.user_post.presetantion.adapter
+package com.matheus.caserogalabs.feature.user_post.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.matheus.caserogalabs.common.utils.AdapterItemClickListener
+import com.matheus.caserogalabs.common.utils.AdapterItemWithParameterClickListener
 import com.matheus.caserogalabs.databinding.UserPostRecyclerBinding
-import com.matheus.caserogalabs.feature.user_post.data.model.PostModel
+import com.matheus.caserogalabs.feature.user_post.presentation.model.PostModel
 
 class UserPostAdapter(private val list: List<PostModel>) :
     RecyclerView.Adapter<UserPostAdapter.ViewHolder>() {
@@ -20,6 +22,8 @@ class UserPostAdapter(private val list: List<PostModel>) :
         holder.bind(list[position])
     }
 
+    var itemClickListener: AdapterItemWithParameterClickListener<Int> = {}
+
     inner class ViewHolder(private val binding: UserPostRecyclerBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(postItem: PostModel) {
@@ -27,8 +31,9 @@ class UserPostAdapter(private val list: List<PostModel>) :
                 titlePost.text = postItem.title
                 bodyPost.text = postItem.body
             }
+            itemView.setOnClickListener {
+                itemClickListener(postItem.id)
+            }
         }
     }
-
-
 }
