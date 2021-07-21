@@ -3,10 +3,10 @@ package com.matheus.caserogalabs.feature.user_post.presetantion.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.caserogalabs.common.Post
 import com.matheus.caserogalabs.databinding.UserPostRecyclerBinding
+import com.matheus.caserogalabs.feature.user_post.data.model.PostModel
 
-class UserPostAdapter(private val list: List<Post>) :
+class UserPostAdapter(private val list: List<PostModel>) :
     RecyclerView.Adapter<UserPostAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserPostAdapter.ViewHolder {
         val binding =
@@ -22,10 +22,10 @@ class UserPostAdapter(private val list: List<Post>) :
 
     inner class ViewHolder(private val binding: UserPostRecyclerBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(postItem: Post) {
+        fun bind(postItem: PostModel) {
             with(binding) {
-                binding.titlePost.text = postItem.title
-                binding.bodyPost.text = postItem.body
+                titlePost.text = postItem.title
+                bodyPost.text = postItem.body
             }
         }
     }
