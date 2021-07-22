@@ -3,9 +3,9 @@ package com.matheus.caserogalabs.feature.user_post.data.remote.mapper
 import com.matheus.caserogalabs.feature.user_post.presentation.model.PostModel
 import com.matheus.caserogalabs.feature.user_post.data.remote.model.PostResponse
 
-object PostMapper {
+object PostsMapper {
 
-    fun toDomain(postResponseList: List<PostResponse>?): List<PostModel> {
+    fun toPresentation(postResponseList: List<PostResponse>?): List<PostModel> {
         return if (postResponseList.isNullOrEmpty()) {
             emptyList()
         } else {

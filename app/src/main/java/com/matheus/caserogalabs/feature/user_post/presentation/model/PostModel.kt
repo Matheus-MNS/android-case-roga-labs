@@ -2,7 +2,7 @@ package com.matheus.caserogalabs.feature.user_post.presentation.model
 
 data class PostModel(
     var userId: Int,
-    val id: Int,
+    var id: Int,
     var title: String,
     var body: String
 ) {

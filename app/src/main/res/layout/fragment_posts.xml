@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.user_post.presentation.UserPostFragment">
+    tools:context=".feature.user_post.presentation.PostsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userPostRecyclerView"
@@ -19,6 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/user_post_recycler" />
+        tools:listitem="@layout/item_post_row" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
