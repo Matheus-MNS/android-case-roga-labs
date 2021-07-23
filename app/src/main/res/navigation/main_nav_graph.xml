@@ -18,16 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/userPostFragment"
-        android:name="com.matheus.caserogalabs.feature.user_post.presentation.PostsFragment"
+        android:name="com.matheus.caserogalabs.feature.posts.presentation.PostsFragment"
         android:label="fragment_user_post"
-        tools:layout="@layout/fragment_posts" >
-        <action
-            android:id="@+id/action_userPostFragment_to_commentUserPostFragment"
-            app:destination="@id/commentUserPostFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/commentUserPostFragment"
-        android:name="com.matheus.caserogalabs.feature.comment_user_post.presentation.CommentUserPostFragment"
-        android:label="fragment_comment_user_post"
-        tools:layout="@layout/fragment_comment_user_post" />
+        tools:layout="@layout/fragment_posts" />
 </navigation>

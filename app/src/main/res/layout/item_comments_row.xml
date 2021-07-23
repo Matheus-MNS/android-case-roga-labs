@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/userIcon"
@@ -33,10 +33,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/userIcon"
         app:layout_constraintTop_toBottomOf="@id/userName"
         tools:text="email" />
@@ -46,13 +46,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:textSize="12sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userEmail"
-        tools:text="Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem num gosta di mé, boa gentis num é. Suco de cevadiss deixa as pessoas mais interessantis." />
+        app:layout_constraintTop_toBottomOf="@id/userIcon"
+        tools:text="body" />
 
     <View
         android:layout_width="match_parent"
