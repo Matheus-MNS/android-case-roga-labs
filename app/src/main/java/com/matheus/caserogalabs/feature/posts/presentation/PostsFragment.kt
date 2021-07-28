@@ -14,10 +14,11 @@ import com.matheus.caserogalabs.feature.posts.presentation.adapter.PostsAdapter
 import com.matheus.caserogalabs.feature.posts.presentation.model.CommentsModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+private const val COMMENTS = "comments"
+
 class PostsFragment : Fragment() {
 
     private lateinit var binding: FragmentPostsBinding
-    private lateinit var postsAdapter: PostsAdapter
     private lateinit var clickedPostTitle: String
     private val viewModel: PostsViewModel by viewModel()
 
@@ -56,7 +57,7 @@ class PostsFragment : Fragment() {
     }
 
     private fun handleRecyclerView(list: List<PostModel>) {
-        postsAdapter = PostsAdapter(list)
+        val postsAdapter = PostsAdapter(list)
         binding.userPostRecyclerView.adapter = postsAdapter
         postsAdapter.itemClickListener = {
             viewModel.getPostComments(it.first)
@@ -70,7 +71,9 @@ class PostsFragment : Fragment() {
             commentsList = list
             postTitle = clickedPostTitle
         }
-        activity?.supportFragmentManager?.let { commentsDialog.show(it, "comments") }
+        activity?.supportFragmentManager?.let { supportFragmentManager ->
+            commentsDialog.show(supportFragmentManager, COMMENTS)
+        }
     }
 
     private fun handleError(apiError: String) {

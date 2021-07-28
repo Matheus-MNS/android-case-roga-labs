@@ -11,7 +11,7 @@ import com.matheus.caserogalabs.feature.posts.presentation.adapter.PostCommentsA
 import com.matheus.caserogalabs.feature.posts.presentation.model.CommentsModel
 
 class CommentsDialogFragment : DialogFragment() {
-    private lateinit var commentaryAdapter: PostCommentsAdapter
+
     private lateinit var binding: DialogCommentsBinding
     var postTitle: String = ""
     var commentsList: List<CommentsModel> = emptyList()
@@ -28,7 +28,7 @@ class CommentsDialogFragment : DialogFragment() {
 
     private fun setWindowFeatures() {
         dialog?.apply {
-            requestWindowFeature(Window.FEATURE_NO_TITLE)
+
             window?.decorView?.setBackgroundResource(android.R.color.transparent)
             val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
             val height = (resources.displayMetrics.heightPixels * 0.85).toInt()
@@ -46,7 +46,7 @@ class CommentsDialogFragment : DialogFragment() {
     }
 
     private fun handleRecyclerView() {
-        commentaryAdapter = PostCommentsAdapter(commentsList)
+        val commentaryAdapter = PostCommentsAdapter(commentsList)
         binding.dialogFragmentRecyclerView.adapter = commentaryAdapter
     }
 }
