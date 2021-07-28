@@ -3,9 +3,9 @@ package com.matheus.caserogalabs.feature.posts.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.matheus.caserogalabs.feature.posts.presentation.model.PostModel
-import com.matheus.caserogalabs.feature.posts.data.remote.mapper.PostsMapper
+import com.matheus.caserogalabs.feature.posts.presentation.mapper.PostsMapper
 import com.matheus.caserogalabs.feature.posts.data.remote.data_source.PostRemoteDataSource
-import com.matheus.caserogalabs.feature.posts.data.remote.mapper.CommentsMapper
+import com.matheus.caserogalabs.feature.posts.presentation.mapper.CommentsMapper
 import com.matheus.caserogalabs.feature.posts.data.remote.model.CommentsResponse
 import com.matheus.caserogalabs.feature.posts.data.remote.model.PostResponse
 import com.matheus.caserogalabs.feature.posts.presentation.model.CommentsModel

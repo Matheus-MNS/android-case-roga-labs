@@ -1,4 +1,4 @@
-package com.matheus.caserogalabs.feature.posts.data.remote.mapper
+package com.matheus.caserogalabs.feature.posts.presentation.mapper
 
 import com.matheus.caserogalabs.feature.posts.data.remote.model.CommentsResponse
 import com.matheus.caserogalabs.feature.posts.presentation.model.CommentsModel
@@ -20,7 +20,7 @@ object CommentsMapper {
                 id = it.id ?: 0,
                 name = it.name ?: "",
                 email = it.email ?: "",
-                body = it.body ?: "",
+                body = it.body ?: ""
             )
         }
 }

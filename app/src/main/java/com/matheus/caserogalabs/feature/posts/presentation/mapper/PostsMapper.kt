@@ -1,4 +1,4 @@
-package com.matheus.caserogalabs.feature.posts.data.remote.mapper
+package com.matheus.caserogalabs.feature.posts.presentation.mapper
 
 import com.matheus.caserogalabs.feature.posts.presentation.model.PostModel
 import com.matheus.caserogalabs.feature.posts.data.remote.model.PostResponse
@@ -19,7 +19,7 @@ object PostsMapper {
                 userId = it.userId ?: 0,
                 id = it.id ?: 0,
                 title = it.title ?: "",
-                body = it.body ?: "",
+                body = it.body ?: ""
             )
         }
 }

@@ -3,7 +3,7 @@ package com.matheus.caserogalabs.feature.posts.data.remote.model
 import com.google.gson.annotations.SerializedName
 
 data class CommentsResponse(
-    @SerializedName("PostId")
+    @SerializedName("postId")
     val postId: Int?,
     @SerializedName("id")
     val id: Int?,
