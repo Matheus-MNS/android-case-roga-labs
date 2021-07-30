@@ -32,40 +32,40 @@ class PostsViewModel(
     }
 
     init {
-        getPosts()
+        //getPosts()
     }
 
-    private fun getPosts() {
-        postRemoteDataSource.getPosts().enqueue(
-            object : Callback<List<PostResponse>> {
-                override fun onResponse(
-                    call: Call<List<PostResponse>>,
-                    response: Response<List<PostResponse>>
-                ) {
-                    postList.value = PostsMapper.toPresentation(response.body())
-                }
-
-                override fun onFailure(call: Call<List<PostResponse>>, t: Throwable) {
-                    error.value = ERROR
-                }
-            }
-        )
-    }
-
-    fun getPostComments(postId: Int) {
-        postRemoteDataSource.getPostComments(postId).enqueue(
-            object : Callback<List<CommentsResponse>> {
-                override fun onResponse(
-                    call: Call<List<CommentsResponse>>,
-                    response: Response<List<CommentsResponse>>
-                ) {
-                    commentsList.value = CommentsMapper.toPresentation(response.body())
-                }
-
-                override fun onFailure(call: Call<List<CommentsResponse>>, t: Throwable) {
-                    error.value = ERROR
-                }
-            }
-        )
-    }
+//    private fun getPosts() {
+//        postRemoteDataSource.getPosts().enqueue(
+//            object : Callback<List<PostResponse>> {
+//                override fun onResponse(
+//                    call: Call<List<PostResponse>>,
+//                    response: Response<List<PostResponse>>
+//                ) {
+//                    postList.value = PostsMapper.toPresentation(response.body())
+//                }
+//
+//                override fun onFailure(call: Call<List<PostResponse>>, t: Throwable) {
+//                    error.value = ERROR
+//                }
+//            }
+//        )
+//    }
+//
+//    fun getPostComments(postId: Int) {
+//        postRemoteDataSource.getPostComments(postId).enqueue(
+//            object : Callback<List<CommentsResponse>> {
+//                override fun onResponse(
+//                    call: Call<List<CommentsResponse>>,
+//                    response: Response<List<CommentsResponse>>
+//                ) {
+//                    commentsList.value = CommentsMapper.toPresentation(response.body())
+//                }
+//
+//                override fun onFailure(call: Call<List<CommentsResponse>>, t: Throwable) {
+//                    error.value = ERROR
+//                }
+//            }
+//        )
+//    }
 }
